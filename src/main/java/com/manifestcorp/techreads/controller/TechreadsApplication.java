@@ -1,4 +1,4 @@
-package com.manifestcorp.techreads;
+package com.manifestcorp.techreads.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
