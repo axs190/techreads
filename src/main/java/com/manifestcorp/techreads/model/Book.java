@@ -17,6 +17,7 @@ public class Book {
     public Book() {}
 
     public Book(String title) {
+        this.cover=cover;
         this.id=id;
         this.title = title;
         this.author= author;
@@ -32,5 +33,7 @@ public class Book {
     public void setAuthor(String author) { this.author = author; }
     public String getRating() { return rating; }
     public void setRating(String rating) { this.rating = rating; }
+    public String getCover() { return cover; }
+    public void setCover(String cover) { this.cover = cover; }
 
 }

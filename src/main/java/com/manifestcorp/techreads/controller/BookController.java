@@ -46,6 +46,13 @@ public class BookController {
         bookRepository.deleteById(id);
         return new RedirectView("/books");
     }
+    @RequestMapping(value = {"/detail/{id}"})
+    public ModelAndView changeToDetail(@PathVariable("id")Long id) {
+        ModelAndView mav = new ModelAndView("detail");
+        mav.addObject("book",bookRepository.getById(id));
+        return mav;
+    }
+
 
 
 }
