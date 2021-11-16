@@ -9,8 +9,9 @@
             <ul>
                 <c:forEach var ="book" items="${books}">
                 <li><c:out value ="${book.title}" />
-                    <a href="<c:url value ="/books/delete/${book.id}" />">Remove</a>
-                    <a href="<c:url value ="/books/detail/${book.id}" />">Detail</a>
+                    <a href="<c:url value ="/books/delete/${book.id}" />">   Remove</a>
+                    <a href="<c:url value ="/books/detail/${book.id}" />">   Detail</a>
+                    <a href="<c:url value ="/books/edit/${book.id}" />">   Edit</a>
                 </li>
                 </c:forEach>
             </ul>

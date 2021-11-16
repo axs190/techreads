@@ -4,8 +4,9 @@
 <html>
 <body>
 <h1>Book Details</h1>
+
+<img src='<c:url value="${book.cover}"></c:url>' />
     <ul>
-        <li>Cover:  <img src='<c:url value="${book.cover}"></c:url>' />
         <li>Title: <c:out value ="${book.title}" /></li>
         <li>Author: <c:out value ="${book.author}" /> </li>
         <li>Rating: <c:out value ="${book.rating}" /> </li>
