@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Objects;
 
 @Entity
 public class Book {
@@ -16,14 +17,22 @@ public class Book {
     String cover;
     public Book() {}
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(id, book.id) && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(rating, book.rating) && Objects.equals(cover, book.cover);
+    }
+
+
     public Book(String title) {
         this.cover=cover;
         this.id=id;
         this.title = title;
         this.author= author;
         this.rating= rating;
-
-
     }
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }

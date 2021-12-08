@@ -11,7 +11,7 @@ sql.execute("delete from book")
 def json = new JsonSlurper()
 
 //Adds books to dataset
-def GAPI= new URL('https://www.googleapis.com/books/v1/volumes?q=Witcher')
+def GAPI= new URL('https://www.googleapis.com/books/v1/volumes?q=Pokemon')
 def response = json.parse(GAPI)
 
 def books = sql.dataSet("book")
